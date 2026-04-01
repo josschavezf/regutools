@@ -26,8 +26,9 @@
 #' regulondb_conn_noAH <- connect_database(ah = NULL)
 connect_database <-
     function(
-    ah = AnnotationHub::AnnotationHub(),
-    bfc = BiocFileCache::BiocFileCache()) {
+      ah = AnnotationHub::AnnotationHub(),
+      bfc = BiocFileCache::BiocFileCache()
+    ) {
         if (!is.null(ah)) {
             ## Check input
             stopifnot(methods::is(ah, "AnnotationHub"))
